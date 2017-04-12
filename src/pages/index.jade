@@ -1,4 +1,21 @@
 extends ../layouts/default.jade
 
 block content
+	include ../mixins/mixin
 	h1 jade page
+	.row.align-justify
+		.column.shrink
+			p.text.
+				azazazazaza
+				sdfsaasf
+				sadfasfasd
+				sdfasfasf
+				sdfsdfsf
+		.column.shrink
+			ul
+				- for(var i=1; i<=20; i++)
+					li: h3 iteration #{i}
+	.row
+		include ../partials/text-part
+		+button('first button', 'red', 'button')
+		+button('first button', 'green', 'button')
