@@ -1,0 +1,14 @@
+extends ../../layouts/default
+block content
+ include blocks/mockupData
+
+  .row.column.container
+    h2 Array of objects
+    .row
+      each item in arrayOfObjects
+        .column.small-4
+          article.card
+            img(src="#{imgPath}#{item.pic}.jpg")
+            h3 #{item.title}
+            p #{item.message}
+

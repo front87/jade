@@ -1,0 +1,12 @@
+extends ../../layouts/default
+block content
+  include blocks/mockupData
+  include blocks/mixins
+
+  .row.column.container
+    h2 Array of objects
+    .row
+      each item in arrayOfObjects
+        if item.pic !== 'pic2'
+          .column.small-4
+            +article(item.pic, item.title, item.message)

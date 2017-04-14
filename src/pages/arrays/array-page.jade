@@ -1,0 +1,32 @@
+extends ../../layouts/default
+
+block content
+  - var simpleList = ["first", "second", "third", "fourth", "fifth"]
+
+  .row.column.container
+    h3 Simple array
+    .inner-container
+      ul
+        each item in simpleList
+          li= item
+  .row.column.container
+    h3 Simple array with index
+    .inner-container
+      ul
+        each item, i in simpleList
+          li
+            dl.inline-dt
+              dt #{item},
+              dd index - #{i}
+
+  .row.column.container
+    h3 Simple array with index
+    .inner-container
+      ul
+        each item, i in simpleList
+          if i != 2
+            li
+              dl.inline-dt
+                dt #{item},
+                dd index - #{i}
+

@@ -1,0 +1,17 @@
+.container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #e5e5e5;
+  margin-bottom: 20px;
+  margin-top: 25px;
+  padding: 15px;
+}
+.inner-container {
+  padding: 15px 0;
+}
+.inline-dt {
+  dt, dd {
+    display: inline-block;
+  }
+  dt { margin-right: 5px; }
+}
